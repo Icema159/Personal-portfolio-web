@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://icema159.github.io/Personal-portfolio-page",
+  "homepage": "https://icema159.github.io/Personal-portfolio-web",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
