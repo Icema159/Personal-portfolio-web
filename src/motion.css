@@ -193,3 +193,5 @@
         color: #f6f4f0 !important;
     }
 }
+/* Preserve layout and the accessible H1 while its GPU copy is displayed. */
+.name-stage h1.fluid-heading-ready { opacity: 0; }
