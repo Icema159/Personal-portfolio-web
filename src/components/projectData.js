@@ -1,4 +1,4 @@
-import { BrainCircuit, Dumbbell, LayoutDashboard, Layers3, MonitorSmartphone, Palette, Users } from 'lucide-react';
+import { BrainCircuit, Dumbbell, MonitorSmartphone, Palette, Users } from 'lucide-react';
 export const projects = [
     {
         title: "Developer Knowledge Hub", status: "Live production", category: "AI knowledge platform · 2026", icon: BrainCircuit,
@@ -21,16 +21,6 @@ export const projects = [
         title: "AriArt Website", category: "Client website", icon: Palette,
         description: "Real-world business website focused on responsive layout, clean UI, service presentation and production deployment.",
         tags: ["React", "JavaScript", "Tailwind CSS", "Responsive UI"], live: "https://www.ariart.lt/", github: "https://github.com/Icema159/ariart",
-    },
-    {
-        title: "Personal Portfolio Page", category: "Personal brand", icon: LayoutDashboard,
-        description: "My personal developer portfolio built with React, Vite and Tailwind CSS to present projects, skills and developer profile.",
-        tags: ["React", "Vite", "Tailwind CSS", "GitHub Pages"], live: "https://icema159.github.io/Personal-portfolio-page/", github: "https://github.com/Icema159/Personal-portfolio-page",
-    },
-    {
-        title: "PayAPI Multi-page Website", status: "Team Project", category: "Frontend build", icon: Layers3,
-        description: "Frontend team project focused on responsive multi-page layout, clean component structure and collaborative Git workflow.",
-        tags: ["HTML", "CSS", "JavaScript", "Responsive Design", "Git"], github: "https://github.com/h4kazz/PayAPI-multi-page-website",
     },
     {
         title: "Tricking Site", category: "Community concept", icon: MonitorSmartphone,
