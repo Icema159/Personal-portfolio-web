@@ -1,0 +1,134 @@
+.next-chapter {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 75svh;
+  padding: clamp(72px, 9vw, 132px) 24px;
+  text-align: center;
+  background: #050505;
+}
+.next-chapter-kicker {
+  margin: 0 0 34px;
+  color: #aaa4b3;
+  font-size: clamp(12px, 1vw, 14px);
+  letter-spacing: .035em;
+}
+.next-chapter-title {
+  position: relative;
+  margin: 0;
+  font-family: 'Antonio', sans-serif;
+  font-size: clamp(96px, 15vw, 230px);
+  font-weight: 700;
+  line-height: .97;
+  letter-spacing: -.055em;
+}
+.next-chapter-outline {
+  display: block;
+  color: transparent;
+  -webkit-text-stroke: 1px #84778f;
+}
+.next-chapter-fill {
+  position: absolute;
+  inset: 0;
+  display: block;
+  color: #d7c9f5;
+}
+.next-chapter-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin-top: 44px;
+  color: #f6f4f0;
+  font-size: 14px;
+}
+.next-chapter-link:hover { color: #d7c9f5; }
+.next-chapter-link:focus-visible { opacity: 1 !important; transform: none !important; }
+@media (max-width: 760px) {
+  .next-chapter { min-height: 70svh; padding: 72px 20px; }
+  .next-chapter-title { font-size: clamp(96px, 25vw, 170px); }
+  .next-chapter-kicker { margin-bottom: 28px; }
+  .next-chapter-link { margin-top: 34px; font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .next-chapter-fill { clip-path: none !important; }
+  .next-chapter-link { opacity: 1 !important; transform: none !important; }
+}
+@media (forced-colors: active) {
+  .next-chapter-outline { color: CanvasText; -webkit-text-stroke: 0; }
+  .next-chapter-fill { display: none; }
+}
+/* Leave room for Antonio's glyph overhang inside the animated clipping mask. */
+.next-chapter-outline, .next-chapter-fill { padding: .04em; }
+
+/* The contact remains in document flow and covers the pinned chapter. */
+.next-chapter { display: block; height: 200svh; padding: 0; }
+.next-chapter-sticky {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  display: grid;
+  place-items: center;
+  overflow: clip;
+}
+.next-chapter-scene {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px 20px;
+  transform-origin: center 42%;
+}
+.next-chapter-title { font-size: min(15vw, 27svh, 230px); }
+.next-chapter + .contact-section {
+  position: relative;
+  z-index: 2;
+  max-width: none;
+  width: 100%;
+  min-height: 100svh;
+  margin: -55svh 0 0;
+  padding: clamp(48px, 7vw, 100px) max(24px, calc((100% - 1052px) / 2)) 32px;
+  background: #111014;
+  border: 1px solid #39323f;
+  border-bottom: 0;
+  border-radius: 36px 36px 0 0;
+  box-shadow: 0 -24px 80px #0005;
+}
+.next-chapter + .contact-section .contact-panel {
+  border: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+@media (max-width: 760px) {
+  .next-chapter-title { font-size: min(25vw, 25svh, 170px); }
+  .next-chapter + .contact-section { border-radius: 24px 24px 0 0; padding: 40px 20px 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .next-chapter { height: auto; min-height: 75svh; }
+  .next-chapter-sticky { position: relative; height: auto; min-height: 75svh; }
+  .next-chapter-scene { transform: none !important; opacity: 1 !important; }
+  .next-chapter + .contact-section { margin-top: 0; }
+}
+
+/* Open a central space between the enlarging words for the incoming panel. */
+.next-chapter-scene { width: 100%; }
+.next-chapter-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+  width: 100%;
+  font-size: min(18vw, 34svh);
+}
+.next-chapter-word { position: relative; display: block; }
+.next-chapter-word:first-child { translate: calc(-1 * var(--word-shift, 0px)) 0; }
+.next-chapter-word:last-child { translate: var(--word-shift, 0px) 0; }
+@media (max-width: 760px) {
+  .next-chapter-title { flex-direction: column; gap: 8svh; font-size: min(32vw, 23svh); }
+  .next-chapter-word:first-child { translate: 0 calc(-1 * var(--word-shift, 0px)); }
+  .next-chapter-word:last-child { translate: 0 var(--word-shift, 0px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .next-chapter-word { transform: none !important; translate: none !important; opacity: 1 !important; }
+}
