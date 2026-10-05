@@ -11,7 +11,7 @@ export default function Hero() {
  return <section ref={ref} id="home" className="editorial-hero">
   <MotionDiv className="hero-center" style={reduce ? {} : { y, opacity }}>
    <p className="hero-role">Junior full-stack developer</p>
-   <div className="name-stage"><img className="hero-knot" src={`${import.meta.env.BASE_URL}assets/hero-knot.png`} alt="" fetchPriority="high"/><h1><span>AISMANTAS</span><span>SKINULIS</span></h1></div>
+   <div className="name-stage"><img className="hero-knot" src={`${import.meta.env.BASE_URL}assets/hero-knot-transparent.png`} alt="" fetchPriority="high"/><h1><span>AISMANTAS</span><span>SKINULIS</span></h1></div>
    <div className="hero-location">BASED IN KAUNAS, LITHUANIA</div>
    <p className="hero-summary">Thoughtful interfaces. Reliable systems.<br/>From the first component to production.</p>
    <div className="hero-actions"><a href="#projects" className="button button-primary">View projects <ArrowDown size={16}/></a><a href={`${import.meta.env.BASE_URL}Aismantas_Skinulis_CV.pdf`} className="button button-glass" target="_blank" rel="noopener noreferrer">Download CV <ArrowUpRight size={16}/></a></div>
